@@ -21,7 +21,9 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "dev": "nf start -p 3000",
-    "package-mac": "electron-packager . timer --overwrite --platform=darwin --arch=x64"
+    "package-mac": "electron-packager . Timer --overwrite --platform=darwin --arch=x64 --icon='./icons/mac/app.icns'",
+    "package-win": "electron-packager . Timer --overwrite --asar=true --platform=win32 --arch=x64 --icon=./icons/win/app.ico --prune=true ",
+    "package-linux": "electron-packager . Timer --overwrite --asar=true --platform=linux --arch=x64 --icon=./icons/png/1024x1024.png --prune=true"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +42,8 @@
   },
   "devDependencies": {
     "electron": "^9.1.2",
+    "electron-icon-generator": "^1.0.2",
+    "electron-packager": "^15.0.0",
     "foreman": "^3.0.1"
   }
 }
