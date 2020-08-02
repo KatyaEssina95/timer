@@ -4,6 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 A simple stopwatch built with React and Electron.
 
+Electron with React: https://www.freecodecamp.org/news/building-an-electron-application-with-create-react-app-97945861647c/
+Timer logic and backbone: https://blog.predovan.com/2017/02/25/How-to-create-a-simple-React-Stopwatch-app/
+
 ### To run locally:
 
 - Clone repo: 
