@@ -1,12 +1,13 @@
 .LapTimeList__list {
     list-style: none;
-    padding: 0px;
-    margin: 15px auto;
+    padding: 20px 0px;
+    margin-bottom: 0;
   }
   
   .LapTimeList__listwrap {
-    max-width: 270px;
+    max-width: 330px;
     margin: 0 auto;
+    color: #DCDCDC
   }
   
   .LapTimeList__headers {
@@ -19,5 +20,14 @@
     text-align: center;
     display: inline-block;
     float: left;
+    letter-spacing: 2px;
   }
-  
+
+  .slideLap-enter {
+    transform: translate(-40px, 0)
+}
+
+.slideLap-enter-active {
+    transform: translate(0, 0);
+    transition: all 300ms ease-in;
+}

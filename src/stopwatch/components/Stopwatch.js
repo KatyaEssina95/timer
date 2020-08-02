@@ -6,6 +6,7 @@ import Controls from './Controls';
 import LapTimeList from './LapTimeList';
 
 import Config from '../constants/Config';
+import ClockFace from './ClockFace';
 
 function getDefaultState() {
   return {
@@ -64,9 +65,8 @@ class Stopwatch extends Component {
     
         return (
             <div className="Stopwatch">
-
-            <h1>Stopwatch</h1>
-    
+            <h2 className="Stopwatch__title">STOPWATCH</h2>
+            <ClockFace time={ time }/>
             <Timer time={ time } />
     
             <Controls

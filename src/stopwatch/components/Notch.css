@@ -1,0 +1,15 @@
+.Notch__line {
+    width: 0.5px;
+    position: absolute;
+    transform-origin: top center;
+    background-color: white;
+    border: 0.5px solid white;
+    border-radius: 2px;
+}
+
+.Notch__number {
+    font-size: 14px;
+    position: absolute;
+    min-width: 20px;
+    transform-origin: top center;
+}

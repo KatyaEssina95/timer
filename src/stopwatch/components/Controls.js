@@ -1,7 +1,16 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Controls.css';
 
 class Controls extends Component {
+
+  static proptTypes = {
+      isRunning  : PropTypes.bool,
+      start      : PropTypes.func.isRequired,
+      stop       : PropTypes.func.isRequired,
+      reset      : PropTypes.func.isRequired,
+      addLapTime : PropTypes.func.isRequired 
+  };
 
   static defaultProps = {
     isRunning : false
@@ -12,31 +21,16 @@ class Controls extends Component {
 
     return (
       <div className="Controls">
-        { !isRunning ?
-            <button
-              onClick={ start }
-              className="Controls__button"
-              ref="startBtn" > Start </button>
-          : null }
+        { isRunning ? 
+            <button onClick={ stop } className="Controls__button" > STOP </button> :
+            <button onClick={ start } className="Controls__button"> START </button>
+        }
 
-        { isRunning ?
-          <button
-            onClick={ stop }
-            className="Controls__button"
-            ref="stopBtn" > Stop </button>
-        : null }
+        { isRunning ? 
+            <button onClick={ addLapTime } className="Controls__button" > LAP </button> :
+            <button onClick={ reset } className="Controls__button" > RESET </button>
+        }
 
-        <button
-          onClick={ reset }
-          disabled={ isRunning }
-          className="Controls__button"
-          ref="resetBtn" > Reset </button>
-
-        <button
-          onClick={ addLapTime }
-          disabled={ !isRunning }
-          className="Controls__button"
-          ref="lapBtn" > Lap Time </button>
       </div>
     );
   }
