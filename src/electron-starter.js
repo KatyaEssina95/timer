@@ -13,7 +13,7 @@ let mainWindow;
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 800, height: 600, icon: path.join(__dirname, '/../public/favicon.ico')});
+    mainWindow = new BrowserWindow({ width: 800, height: 600, icon: path.join(__dirname, '/../icons/win/app.ico') });
 
     mainWindow.maximize();
 
