@@ -3,17 +3,19 @@ const electron = require('electron');
 const app = electron.app;
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
-
+const os = require('os');
 const path = require('path');
 const url = require('url');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
+let iconPath;
 
 function createWindow() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({ width: 800, height: 600, icon: path.join(__dirname, '/../icons/win/app.ico') });
+    iconPath = path.join(__dirname, '/../icons/win/app.ico') ? os.platform === 'WINDOWS' : path.join(__dirname, '/../icons/mac/app.icns') ;
+    mainWindow = new BrowserWindow({ width: 800, height: 600, icon:  iconPath});
 
     mainWindow.maximize();
 
